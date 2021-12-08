@@ -1,2 +1,4 @@
 # modules
 node_modules
+# error
+yarn-error.log
