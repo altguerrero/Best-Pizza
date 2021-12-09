@@ -1,0 +1,72 @@
+.Login {
+  &-container {
+    width: 100%;
+    max-width: 400px;
+    margin-left: 8rem;
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  & .Logo {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 2rem;
+  }
+
+  & .Title {
+    margin-bottom: 1rem;
+  }
+
+  & .Form {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+      margin-bottom: 1rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    &__icon {
+      width: 25px;
+      position: absolute;
+      right: 1.25rem;
+
+      & img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      padding: 1.25rem 0.5rem;
+      padding-right: 3.5rem;
+      border: 1px solid var(--gray);
+      border-radius: 2.5px;
+      font-size: 14px;
+      color: var(--gray);
+      display: block;
+
+      &:focus {
+        border: 1px solid transparent;
+        outline: 3px var(--primary-color) solid;
+      }
+    }
+
+    &__link {
+      margin-top: 1rem;
+      margin-bottom: 2.5rem;
+      color: var(--black);
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,11 +1,13 @@
 import React from "react";
 // Containers
 import Layout from "@containers/Layout";
+// Pages
+import Login from "@pages/Login";
 
 const App = () => {
   return (
     <Layout>
-      <h1>Hola mundo</h1>
+      <Login />
     </Layout>
   );
 };
