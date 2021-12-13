@@ -2,11 +2,21 @@
   &-container {
     width: 100%;
     max-width: 400px;
-    margin-left: 8rem;
+    margin: 0 auto;
+    padding: 5rem 1rem 3rem;
     padding-top: 5rem;
     display: flex;
     align-items: center;
     flex-direction: column;
+
+
+    @media (min-width: 1024px) {
+      margin-left: 4rem;
+    }
+
+    @media (min-width: 1280px) {
+      margin-left: 8rem;
+    }
   }
 
   & .Logo {
