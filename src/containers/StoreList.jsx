@@ -8,7 +8,7 @@ import useGetStores from "@hooks/useGetStores";
 // Context
 import AppContext from "@context/AppContext";
 
-const API = "https://pruebas-muy-candidatos.s3.us-east-2.amazonaws.com/RH.json";
+const API = process.env.API;
 
 const StoreList = () => {
   const { state } = useContext(AppContext);

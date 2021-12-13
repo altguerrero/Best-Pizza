@@ -12,7 +12,7 @@ import IcPassword from "@icons/ic_password.png";
 // Context
 import AppContext from "@context/AppContext";
 
-const API = "https://pruebas-muy-candidatos.s3.us-east-2.amazonaws.com/RH.json";
+const API = process.env.API;
 
 const Login = () => {
   const { login } = useContext(AppContext);
