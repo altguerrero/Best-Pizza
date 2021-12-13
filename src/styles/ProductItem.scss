@@ -1,0 +1,11 @@
+.ProductItem {
+  & figure {
+    width: var(--product-size);
+    margin-bottom: 0.75rem;
+    & img {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+    }
+  }
+}
