@@ -1,0 +1,13 @@
+.StoreList {
+  --item-size: 120px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, var(--item-size));
+
+  @media (min-width: 640px) {
+    --item-size: 150px;
+    grid-template-columns: repeat(3, var(--item-size));
+  }
+}
