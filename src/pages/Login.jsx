@@ -1,5 +1,5 @@
 import "@styles/Login.scss";
-import React, { useRef, useContext } from "react";
+import React, { useRef, useContext, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 // Components
@@ -16,6 +16,7 @@ const API = "https://pruebas-muy-candidatos.s3.us-east-2.amazonaws.com/RH.json";
 
 const Login = () => {
   const { login } = useContext(AppContext);
+  const [error, setError] = useState(false);
   const form = useRef(null);
   const history = useHistory();
 
@@ -30,12 +31,15 @@ const Login = () => {
     };
 
     const validUser = users.filter(
-      (x) => x.name === data.username && x.password === data.password
+      (x) => x.name === data.username || x.email === data.username && x.password === data.password
     );
 
     if (validUser.length === 1) {
       login(validUser);
       history.push({ pathname: "/" });
+    } else {
+      setError(true);
+      form.current.reset();
     }
   };
 
@@ -72,10 +76,19 @@ const Login = () => {
               className="Form__input"
             />
           </label>
+          {error && (
+            <div className="Error">
+              <p className="text-sm">El usuario o contraseña que ingresaste no está conectado a una cuenta.</p>
+            </div>
+          )}
           <a href="/" className="Form__link text-md">
             ¿Olvidaste tu contraseña?
           </a>
-          <button onClick={handleSubmit} className="btn-primary btn-login">
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            className="btn-primary btn-login"
+          >
             Iniciar sesión
           </button>
         </form>
