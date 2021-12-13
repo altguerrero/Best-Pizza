@@ -1,10 +1,8 @@
 import "@styles/Description.scss";
 import React from "react";
 
-const Description = ({ children, size = "text-md", align = "left" }) => (
-  <p className={`Description ${size}`} style={{ textAlign: `${align}` }}>
-    {children}
-  </p>
+const Description = ({ children, size = "text-md" }) => (
+  <p className={`Description ${size}`}>{children}</p>
 );
 
 export default Description;
