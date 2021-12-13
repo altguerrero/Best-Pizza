@@ -1,0 +1,29 @@
+.Footer {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1f1f1f;
+
+  & .Social {
+    & svg {
+      margin-right: 0.25rem;
+      transition: all 0.125s;
+      fill: #fff;
+      cursor: pointer;
+
+      &:hover {
+        fill: var(--primary-color);
+      }
+    }
+  }
+
+  & .Logo {
+    width: 50px;
+    & img {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+    }
+  }
+}
